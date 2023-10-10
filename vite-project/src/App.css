@@ -1,0 +1,26 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.container--binary {
+  display: inline-block;
+  border: 1px solid rgb(68, 219, 212);
+}
+
+.container--binary .labelinput--box {
+  padding: 10px 0px;
+  background: #5165ff;
+}
+
+button {
+  margin: 20px 0px;
+}
+
+.container--binary .box--binary--result {
+  display: flex;
+  padding-left: 20px;
+  background: #5165ff;
+}
