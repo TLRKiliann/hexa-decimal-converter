@@ -3,7 +3,7 @@ import LabelInputComponent from './LabelInputComponent.js'
 import ResultComponent from './ResultComponent.js'
 import ButtonComponent from './ButtonComponent.js'
 
-function CompAsciiToBinary() {
+function CompAsciiToBinary(): JSX.Element {
 
     const [value, setValue] = useState<string>("");
     const [result, setResult] = useState<string | undefined>("");
@@ -19,7 +19,6 @@ function CompAsciiToBinary() {
         const textSplit = value.split('');
         const convertToBin = textSplit.map((char) => char.charCodeAt(0).toString(2));
         const convertToBinJoin = convertToBin.join(' ');
-        console.log(convertToBinJoin);
         setResult(convertToBinJoin);
         setValue("");
     }

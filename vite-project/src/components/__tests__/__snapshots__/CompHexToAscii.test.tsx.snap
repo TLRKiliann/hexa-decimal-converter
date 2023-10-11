@@ -10,6 +10,7 @@ exports[`Snapshat of CompHexToAscii 1`] = `
        :
     </label>
     <input
+      data-testid="testid-input"
       onChange={[Function]}
       placeholder="Hexadecimal"
       type="text"
@@ -17,6 +18,7 @@ exports[`Snapshat of CompHexToAscii 1`] = `
     />
   </div>,
   <button
+    data-testid="testid-btn"
     onClick={[Function]}
     type="button"
   >

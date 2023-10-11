@@ -2,6 +2,7 @@
 
 exports[`Snapshat of ButtonComponent 1`] = `
 <button
+  data-testid="testid-btn"
   onClick={[Function]}
   type="button"
 >

@@ -30,6 +30,7 @@ exports[`Snapshat of App 1`] = `
            :
         </label>
         <input
+          data-testid="testid-input"
           onChange={[Function]}
           placeholder="ASCII"
           type="text"
@@ -37,6 +38,7 @@ exports[`Snapshat of App 1`] = `
         />
       </div>
       <button
+        data-testid="testid-btn"
         onClick={[Function]}
         type="button"
       >
@@ -65,6 +67,7 @@ exports[`Snapshat of App 1`] = `
            :
         </label>
         <input
+          data-testid="testid-input"
           onChange={[Function]}
           placeholder="Binary"
           type="text"
@@ -72,6 +75,7 @@ exports[`Snapshat of App 1`] = `
         />
       </div>
       <button
+        data-testid="testid-btn"
         onClick={[Function]}
         type="button"
       >
@@ -104,6 +108,7 @@ exports[`Snapshat of App 1`] = `
            :
         </label>
         <input
+          data-testid="testid-input"
           onChange={[Function]}
           placeholder="Binary"
           type="text"
@@ -111,6 +116,7 @@ exports[`Snapshat of App 1`] = `
         />
       </div>
       <button
+        data-testid="testid-btn"
         onClick={[Function]}
         type="button"
       >
@@ -139,6 +145,7 @@ exports[`Snapshat of App 1`] = `
            :
         </label>
         <input
+          data-testid="testid-input"
           onChange={[Function]}
           placeholder="Hexadecimal"
           type="text"
@@ -146,6 +153,7 @@ exports[`Snapshat of App 1`] = `
         />
       </div>
       <button
+        data-testid="testid-btn"
         onClick={[Function]}
         type="button"
       >
@@ -178,6 +186,7 @@ exports[`Snapshat of App 1`] = `
            :
         </label>
         <input
+          data-testid="testid-input"
           onChange={[Function]}
           placeholder="ASCII"
           type="text"
@@ -185,6 +194,7 @@ exports[`Snapshat of App 1`] = `
         />
       </div>
       <button
+        data-testid="testid-btn"
         onClick={[Function]}
         type="button"
       >
@@ -213,6 +223,7 @@ exports[`Snapshat of App 1`] = `
            :
         </label>
         <input
+          data-testid="testid-input"
           onChange={[Function]}
           placeholder="Hexadecimal"
           type="text"
@@ -220,6 +231,7 @@ exports[`Snapshat of App 1`] = `
         />
       </div>
       <button
+        data-testid="testid-btn"
         onClick={[Function]}
         type="button"
       >

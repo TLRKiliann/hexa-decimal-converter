@@ -3,7 +3,7 @@ import LabelInputComponent from './LabelInputComponent.js'
 import ResultComponent from './ResultComponent.js'
 import ButtonComponent from './ButtonComponent.js'
 
-function CompHexToAscii() {
+function CompHexToAscii(): JSX.Element {
     const [value, setValue] = useState<string>("");
     const [result, setResult] = useState<string | undefined>("");
     

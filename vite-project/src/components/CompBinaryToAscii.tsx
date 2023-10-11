@@ -3,7 +3,7 @@ import LabelInputComponent from './LabelInputComponent.tsx'
 import ResultComponent from './ResultComponent.tsx'
 import ButtonComponent from './ButtonComponent.tsx';
 
-function CompBinaryToAscii() {
+function CompBinaryToAscii(): JSX.Element {
     
     const [value, setValue] = useState<string>("");
     const [result, setResult] = useState<string | undefined>();

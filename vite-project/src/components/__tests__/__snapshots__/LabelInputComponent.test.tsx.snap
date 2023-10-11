@@ -1,11 +1,12 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Snapshat of LabelInputComponent 1`] = `
+exports[`Snapshat of CompHexToAscii 1`] = `
 [
   <label>
      :
   </label>,
   <input
+    data-testid="testid-input"
     onChange={[Function]}
     placeholder=""
     type="text"

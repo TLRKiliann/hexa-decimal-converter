@@ -12,6 +12,7 @@ export default function LabelInputComponent({value, nameValue, converterTarget, 
         <>
             <label>{children} :</label>
             <input
+                data-testid="testid-input"
                 type="text"
                 value={value}
                 onChange={(event)=>converterTarget(event)}
