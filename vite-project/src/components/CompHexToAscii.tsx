@@ -3,12 +3,11 @@ import LabelInputComponent from './LabelInputComponent.js'
 import ResultComponent from './ResultComponent.js'
 import ButtonComponent from './ButtonComponent.js'
 
-function CompAsciiToBinary() {
-
+function CompHexToAscii() {
     const [value, setValue] = useState<string>("");
     const [result, setResult] = useState<string | undefined>("");
-
-    const nameValue = "ASCII";
+    
+    const nameValue = "Hexadecimal";
 
     const converterTarget = (event: React.ChangeEvent<HTMLInputElement>): void => {
       const etv = event?.target.value;
@@ -16,11 +15,9 @@ function CompAsciiToBinary() {
     }
 
     const convertResult = (): void => {
-        const textSplit = value.split('');
-        const convertToBin = textSplit.map((char) => char.charCodeAt(0).toString(2));
-        const convertToBinJoin = convertToBin.join(' ');
-        console.log(convertToBinJoin);
-        setResult(convertToBinJoin);
+        const name = value;
+        const result = String.fromCharCode(parseInt(name));
+        setResult(result);
         setValue("");
     }
 
@@ -45,4 +42,5 @@ function CompAsciiToBinary() {
     )
 }
 
-export default CompAsciiToBinary
+export default CompHexToAscii
+

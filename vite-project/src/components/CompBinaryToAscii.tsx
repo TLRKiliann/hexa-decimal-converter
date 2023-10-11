@@ -3,29 +3,31 @@ import LabelInputComponent from './LabelInputComponent.tsx'
 import ResultComponent from './ResultComponent.tsx'
 import ButtonComponent from './ButtonComponent.tsx';
 
-export default function CompBinaryDecimal() {
+function CompBinaryToAscii() {
     
     const [value, setValue] = useState<string>("");
-    const [result, setResult] = useState<number | undefined>();
-  
+    const [result, setResult] = useState<string | undefined>();
+
     const nameValue = "Binary";
 
     const converterTarget = (event: React.ChangeEvent<HTMLInputElement>) => {
-      const etv = event?.target.value;
-      setValue(etv);
+        const etv = event?.target.value;
+        setValue(etv);
     }
-  
+    
     const convertResult = () => {
-      const parser = parseInt(value,2);
-      console.log(parser, "parser");
-      setResult(parser);
-      setValue("");
+        const parser = value.split(" ");
+        const convertToAscii = parser.map((elem) => String.fromCharCode(parseInt(elem, 2)));
+        const resltOfConversion = convertToAscii.join("");
+        setResult(resltOfConversion);
+        setValue("");
     }
 
     return (
         <>
+
             <div className="labelinput--box">
-                <LabelInputComponent 
+                <LabelInputComponent
                     value={value}
                     nameValue={nameValue}
                     converterTarget={(event)=>converterTarget(event)}
@@ -39,6 +41,9 @@ export default function CompBinaryDecimal() {
                     result={result}
                 />
             </div>
+
         </>
     )
 }
+
+export default CompBinaryToAscii

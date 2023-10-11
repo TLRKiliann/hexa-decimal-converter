@@ -3,7 +3,7 @@ import LabelInputComponent from './LabelInputComponent.js'
 import ResultComponent from './ResultComponent.js'
 import ButtonComponent from './ButtonComponent.js'
 
-function CompAsciiToBinary() {
+function CompAsciiToHex() {
 
     const [value, setValue] = useState<string>("");
     const [result, setResult] = useState<string | undefined>("");
@@ -16,11 +16,9 @@ function CompAsciiToBinary() {
     }
 
     const convertResult = (): void => {
-        const textSplit = value.split('');
-        const convertToBin = textSplit.map((char) => char.charCodeAt(0).toString(2));
-        const convertToBinJoin = convertToBin.join(' ');
-        console.log(convertToBinJoin);
-        setResult(convertToBinJoin);
+        let asciiCode = value.charCodeAt(0);
+        let hexValue = asciiCode.toString(16);
+        setResult("0x" + hexValue);
         setValue("");
     }
 
@@ -45,4 +43,4 @@ function CompAsciiToBinary() {
     )
 }
 
-export default CompAsciiToBinary
+export default CompAsciiToHex

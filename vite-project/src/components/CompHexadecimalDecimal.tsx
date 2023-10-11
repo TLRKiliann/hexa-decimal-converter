@@ -5,18 +5,20 @@ import ButtonComponent from './ButtonComponent.tsx';
 
 export default function CompHexadecimalDecimal() {
     
-    const [value, setValue] = useState<string>("hexadecimal");
+    const [value, setValue] = useState<string>("");
     const [result, setResult] = useState<number | undefined>();
-  
+
+    const nameValue = "Hexadecimal";
+
     const converterTarget = (event: React.ChangeEvent<HTMLInputElement>) => {
       const etv = event?.target.value;
       setValue(etv);
     }
-  
+    
     const convertResult = () => {
-      const hexaConv = parseInt(value,16);
-      console.log(hexaConv, "hexaConv");
-      setResult(hexaConv);
+      const parser = parseInt(value,16);
+      console.log(parser, "parser");
+      setResult(parser);
       setValue("");
     }
 
@@ -26,13 +28,14 @@ export default function CompHexadecimalDecimal() {
             <div className="labelinput--box">
                 <LabelInputComponent
                     value={value}
+                    nameValue={nameValue}
                     converterTarget={(event)=>converterTarget(event)}
-                >{value}</LabelInputComponent>
+                >{nameValue}</LabelInputComponent>
             </div>
 
             <ButtonComponent convertResult={convertResult} />
             
-            <div className="box--binary--result">
+            <div className="box--result">
                 <ResultComponent 
                     result={result}
                 />

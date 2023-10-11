@@ -1,5 +1,5 @@
 type ButtonProps = {
-    convertResult: () => void;
+  convertResult: () => void;
 }
 
 function ButtonComponent(props: ButtonProps) {
