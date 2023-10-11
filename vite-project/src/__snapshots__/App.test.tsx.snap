@@ -1,0 +1,239 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Snapshat of App 1`] = `
+[
+  <div
+    className="img--div"
+  >
+    <img
+      alt="math_wallpaper"
+      src="/public/images/math_wallpaper.jpeg"
+    />
+  </div>,
+  <h1>
+    Converter
+  </h1>,
+  <div
+    className="container"
+  >
+    <div
+      className="box"
+    >
+      <h2>
+        ASCII to binary:
+      </h2>
+      <div
+        className="labelinput--box"
+      >
+        <label>
+          ASCII
+           :
+        </label>
+        <input
+          onChange={[Function]}
+          placeholder="ASCII"
+          type="text"
+          value=""
+        />
+      </div>
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        Convert
+      </button>
+      <div
+        className="box--result"
+      >
+        <p>
+          Result : 
+          Not binary !!!
+        </p>
+      </div>
+    </div>
+    <div
+      className="box"
+    >
+      <h2>
+        binary to ASCII:
+      </h2>
+      <div
+        className="labelinput--box"
+      >
+        <label>
+          Binary
+           :
+        </label>
+        <input
+          onChange={[Function]}
+          placeholder="Binary"
+          type="text"
+          value=""
+        />
+      </div>
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        Convert
+      </button>
+      <div
+        className="box--result"
+      >
+        <p>
+          Result : 
+          Not binary !!!
+        </p>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="container"
+  >
+    <div
+      className="box"
+    >
+      <h2>
+        binary to decimal:
+      </h2>
+      <div
+        className="labelinput--box"
+      >
+        <label>
+          Binary
+           :
+        </label>
+        <input
+          onChange={[Function]}
+          placeholder="Binary"
+          type="text"
+          value=""
+        />
+      </div>
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        Convert
+      </button>
+      <div
+        className="box--result"
+      >
+        <p>
+          Result : 
+          Not binary !!!
+        </p>
+      </div>
+    </div>
+    <div
+      className="box"
+    >
+      <h2>
+        hexadecimal to decimal:
+      </h2>
+      <div
+        className="labelinput--box"
+      >
+        <label>
+          Hexadecimal
+           :
+        </label>
+        <input
+          onChange={[Function]}
+          placeholder="Hexadecimal"
+          type="text"
+          value=""
+        />
+      </div>
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        Convert
+      </button>
+      <div
+        className="box--result"
+      >
+        <p>
+          Result : 
+          Not binary !!!
+        </p>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="container"
+  >
+    <div
+      className="box"
+    >
+      <h2>
+        ASCII to Hex:
+      </h2>
+      <div
+        className="labelinput--box"
+      >
+        <label>
+          ASCII
+           :
+        </label>
+        <input
+          onChange={[Function]}
+          placeholder="ASCII"
+          type="text"
+          value=""
+        />
+      </div>
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        Convert
+      </button>
+      <div
+        className="box--result"
+      >
+        <p>
+          Result : 
+          Not binary !!!
+        </p>
+      </div>
+    </div>
+    <div
+      className="box"
+    >
+      <h2>
+        Hex to ASCII:
+      </h2>
+      <div
+        className="labelinput--box"
+      >
+        <label>
+          Hexadecimal
+           :
+        </label>
+        <input
+          onChange={[Function]}
+          placeholder="Hexadecimal"
+          type="text"
+          value=""
+        />
+      </div>
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        Convert
+      </button>
+      <div
+        className="box--result"
+      >
+        <p>
+          Result : 
+          Not binary !!!
+        </p>
+      </div>
+    </div>
+  </div>,
+]
+`;

@@ -1,0 +1,10 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Snapshat of ButtonComponent 1`] = `
+<button
+  onClick={[Function]}
+  type="button"
+>
+  Convert
+</button>
+`;

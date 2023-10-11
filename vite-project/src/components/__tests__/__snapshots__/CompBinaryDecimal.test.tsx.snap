@@ -1,0 +1,34 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Snapshat of CompBinaryDecimal 1`] = `
+[
+  <div
+    className="labelinput--box"
+  >
+    <label>
+      Binary
+       :
+    </label>
+    <input
+      onChange={[Function]}
+      placeholder="Binary"
+      type="text"
+      value=""
+    />
+  </div>,
+  <button
+    onClick={[Function]}
+    type="button"
+  >
+    Convert
+  </button>,
+  <div
+    className="box--result"
+  >
+    <p>
+      Result : 
+      Not binary !!!
+    </p>
+  </div>,
+]
+`;
