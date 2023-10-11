@@ -5,22 +5,68 @@
   text-align: center;
 }
 
-.container--binary {
-  display: inline-block;
-  border: 1px solid rgb(68, 219, 212);
-}
-
-.container--binary .labelinput--box {
-  padding: 10px 0px;
-  background: #5165ff;
-}
-
-button {
-  margin: 20px 0px;
-}
-
-.container--binary .box--binary--result {
+.container {
   display: flex;
-  padding-left: 20px;
+  justify-content: space-evenly;
+  margin-top: 40px;
+}
+
+.container .container--binary {
+  display: flex;
+  flex-direction: column;
+  background-color: #5165ff;
+  border-radius: 12px;
+  box-shadow: 0px 0px 10px royalblue;
+  padding: 10px 20px;
+}
+
+.container .container--binary h2 {
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.container .container--binary .labelinput--box {
+  padding: 0px 0px;
   background: #5165ff;
+}
+
+.container .container--binary .labelinput--box label {
+  font-size: 1.0rem;
+  font-weight: bold;
+}
+
+.container .container--binary .labelinput--box input {
+  width: 160px;
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: #3946aa;
+  margin-left: 10px;
+  padding: 2px 7px;
+}
+
+.container .container--binary button {
+  display: flex;
+  justify-content: center;
+  width: 140px;
+  background: linear-gradient(45deg,#7887ff 1%, #3946aa 45% ,#7887ff 99%);
+  font-weight: 600;
+  color: #00ffaa;
+  margin: 30px auto;
+  box-shadow: 0px 0px 7px #90ee90;
+}
+
+.container .container--binary .box--binary--result {
+  display: flex;
+  background: #7887ff;
+  border-radius: 7px;
+  margin-bottom: 10px;
+  padding-left: 20px;
+}
+
+.container .container--binary .box--binary--result p {
+  font-size: 1.0rem;
+  font-weight: bold;
 }

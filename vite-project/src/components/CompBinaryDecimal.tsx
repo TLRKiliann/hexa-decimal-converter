@@ -1,39 +1,41 @@
 import React, { useState } from 'react'
-import CompLabelInput from './subcomponents/CompBinaryDecimal/CompLabelInput.tsx'
-import CompResultBinaryDecimal from './subcomponents/CompBinaryDecimal/CompResultBinaryDecimal.tsx'
+import LabelInputComponent from './LabelInputComponent.tsx'
+import ResultComponent from './ResultComponent.tsx'
+import ButtonComponent from './ButtonComponent.tsx';
 
 export default function CompBinaryDecimal() {
-    const [binary, setBinary] = useState<string>("");
+    
+    const [value, setValue] = useState<string>("Binary");
     const [result, setResult] = useState<number | undefined>();
   
-    const convertToBinary = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const converterTarget = (event: React.ChangeEvent<HTMLInputElement>) => {
       const etv = event?.target.value;
-      setBinary(etv);
+      setValue(etv);
     }
   
     const convertResult = () => {
-      const binConv = parseInt(binary,2);
+      const binConv = parseInt(value,2);
       console.log(binConv, "binConv");
       setResult(binConv);
-      setBinary("");
+      setValue("");
     }
 
     return (
-        <div>
+        <>
             <div className="labelinput--box">
-                <CompLabelInput 
-                    binary={binary}
-                    convertToBinary={(event)=>convertToBinary(event)}
-                />
+                <LabelInputComponent 
+                    value={value}
+                    converterTarget={(event)=>converterTarget(event)}
+                >{value}</LabelInputComponent>
             </div>
 
-            <button type="button" onClick={convertResult}>Convert</button>
+            <ButtonComponent convertResult={convertResult} />
             
             <div className="box--binary--result">
-                <CompResultBinaryDecimal 
+                <ResultComponent 
                     result={result}
                 />
             </div>
-        </div>
+        </>
     )
 }

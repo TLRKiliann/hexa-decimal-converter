@@ -1,41 +1,43 @@
 import React, { useState } from 'react'
-import CompLabelInputHexadecimal from './subcomponents/CompHexaDecimalDecimal/CompLabelInputHexadecimal.tsx'
-import CompResultHexadecimal from './subcomponents/CompHexaDecimalDecimal/CompResultHexadecimal.tsx'
+import LabelInputComponent from './LabelInputComponent.tsx'
+import ResultComponent from './ResultComponent.tsx'
+import ButtonComponent from './ButtonComponent.tsx';
 
 export default function CompHexadecimalDecimal() {
-    const [hexadecimal, setHexadecimal] = useState<string>("");
-    const [resultHexa, setResultHexa] = useState<number | undefined>();
+    
+    const [value, setValue] = useState<string>("hexadecimal");
+    const [result, setResult] = useState<number | undefined>();
   
     const converterTarget = (event: React.ChangeEvent<HTMLInputElement>) => {
       const etv = event?.target.value;
-      setHexadecimal(etv);
+      setValue(etv);
     }
   
     const convertResult = () => {
-      const hexaConv = parseInt(hexadecimal,16);
+      const hexaConv = parseInt(value,16);
       console.log(hexaConv, "hexaConv");
-      setResultHexa(hexaConv);
-      setHexadecimal("");
+      setResult(hexaConv);
+      setValue("");
     }
 
     return (
-        <div>
+        <>
 
             <div className="labelinput--box">
-                <CompLabelInputHexadecimal
-                    hexadecimal={hexadecimal}
+                <LabelInputComponent
+                    value={value}
                     converterTarget={(event)=>converterTarget(event)}
-                />
+                >{value}</LabelInputComponent>
             </div>
 
-            <button type="button" onClick={convertResult}>Convert</button>
+            <ButtonComponent convertResult={convertResult} />
             
             <div className="box--binary--result">
-                <CompResultHexadecimal 
-                    resultHexa={resultHexa}
+                <ResultComponent 
+                    result={result}
                 />
             </div>
 
-        </div>
+        </>
     )
 }

@@ -1,8 +1,8 @@
 type ResultBinProps = {
-  result: number | undefined;
+  result: number | string | undefined;
 }
 
-export default function CompResultBinaryDecimal(props: ResultBinProps) {
+export default function ResultComponent(props: ResultBinProps) {
   return (
     <>
       <p>Decimal: {props.result ? props.result : "Not binary !!!"}</p>
