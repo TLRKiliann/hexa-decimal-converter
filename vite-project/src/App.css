@@ -1,0 +1,96 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.img--div {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: -5px;
+  filter: opacity(80%);
+  z-index: -1;
+}
+
+.img--div img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 40px;
+}
+
+.container .box {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(81,101,255, 50%);
+  border-radius: 12px;
+  box-shadow: 0px 0px 10px royalblue;
+  padding: 10px 20px;
+}
+
+.container .box h2 {
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: #00ffaa;
+}
+
+.container .box .labelinput--box {
+  width: 320px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255,255,255, 10%);
+  border-radius: 7px;
+  padding-left: 10px;
+}
+
+.container .box .labelinput--box label {
+  font-size: 1.0rem;
+  font-weight: bold;
+}
+
+.container .box .labelinput--box input {
+  width: 160px;
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: #3946aa;
+  margin-left: 10px;
+  padding: 2px 7px;
+}
+
+.container .box button {
+  display: flex;
+  justify-content: center;
+  width: 140px;
+  background: linear-gradient(45deg,#7887ff 1%, #3946aa 45% ,#7887ff 99%);
+  font-weight: 600;
+  color: #00ffaa;
+  margin: 30px auto;
+  box-shadow: 0px 0px 7px #90ee90;
+}
+
+.container .box .box--result {
+  display: flex;
+  background: #7887ff;
+  border-radius: 7px;
+  margin-bottom: 10px;
+  padding-left: 20px;
+}
+
+.container .box .box--result p {
+  font-size: 1.0rem;
+  font-weight: bold;
+}
