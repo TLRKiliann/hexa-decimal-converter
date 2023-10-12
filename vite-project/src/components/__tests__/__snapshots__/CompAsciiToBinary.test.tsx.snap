@@ -1,0 +1,38 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Snapshat of CompAsciiToBinary 1`] = `
+[
+  <div
+    className="labelinput--box"
+  >
+    <label>
+      ASCII
+       :
+    </label>
+    <input
+      data-testid="testid--input"
+      onChange={[Function]}
+      placeholder="ASCII"
+      type="text"
+      value=""
+    />
+  </div>,
+  <button
+    data-testid="testid-btn"
+    onClick={[Function]}
+    type="button"
+  >
+    Convert
+  </button>,
+  <div
+    className="box--result"
+  >
+    <span
+      data-testid="span-testid"
+    >
+      Result : 
+      Not binary !!!
+    </span>
+  </div>,
+]
+`;

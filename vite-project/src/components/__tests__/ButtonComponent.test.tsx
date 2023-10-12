@@ -16,9 +16,9 @@ test('convertResult return boolean', () => {
     convertResult(beverage)
     expect(convertResult).toHaveReturnedWith("yeah")
     expect(convertResult).toHaveBeenCalledTimes(1)
-    });
-    //function convertResult
-    test("testing if convertResult function is present", () => {
+});
+    
+test("testing if convertResult function is present", () => {
     const convertResult = vi.fn();
     expect(convertResult).toBeDefined()
 });

@@ -7,12 +7,16 @@ type InputLblProps = {
     children: string | JSX.Element | JSX.Element[];
 }
 
-export default function LabelInputComponent({value, nameValue, converterTarget, children}: InputLblProps) {
+export default function LabelInputComponent({
+    value, 
+    nameValue,
+    converterTarget,
+    children}: InputLblProps): JSX.Element {
     return (
         <>
             <label>{children} :</label>
             <input
-                data-testid="testid-input"
+                data-testid="testid--input"
                 type="text"
                 value={value}
                 onChange={(event)=>converterTarget(event)}

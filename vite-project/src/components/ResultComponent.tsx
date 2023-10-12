@@ -5,7 +5,9 @@ type ResultBinProps = {
 export default function ResultComponent(props: ResultBinProps) {
   return (
     <>
-      <p>Result : {props.result ? props.result : "Not binary !!!"}</p>
+      <span data-testid="span-testid">
+        Result : {props.result ? props.result : "Not binary !!!"}
+      </span>
     </>
   )
 }

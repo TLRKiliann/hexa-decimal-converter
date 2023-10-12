@@ -12,24 +12,3 @@ test('Snapshat of CompHexToAscii', () => {
     } } children={""} />)
     expect(tree.toJSON()).toMatchSnapshot()
 });
-
-/*
-describe("testing children FirstComp", () => {
-    test('testing function handleReverse', () => {
-        const beverage = "tested";
-        const convertResult = vi.fn(beverage => beverage)
-        convertResult(beverage)
-        render(
-            <LabelInputComponent value={undefined} nameValue={""}>
-                <button data-testid="testid-btn">
-                    Convert
-                </button>
-            </LabelInputComponent>
-        )
-        fireEvent.click(screen.getByTestId('testid-btn'))
-        //expect(convertResult).toHaveReturnedWith("tested")
-        expect(convertResult).toHaveBeenCalledTimes(1)
-        expect(convertResult).toBeDefined();
-    })
-});
-*/
