@@ -1,27 +1,24 @@
 import React, { useState } from 'react'
-import LabelInputComponent from './LabelInputComponent.js'
-import ResultComponent from './ResultComponent.js'
-import ButtonComponent from './ButtonComponent.js'
+import LabelInputComponent from './LabelInputComponent.tsx'
+import ResultComponent from './ResultComponent.tsx'
+import ButtonComponent from './ButtonComponent.tsx'
+import { convertResult } from '../functions/asciiToBinary.tsx'
+import { converterTarget } from '../functions/converterTarget.tsx'
 
-function CompAsciiToBinary() {
+function CompAsciiToBinary(): JSX.Element {
 
     const [value, setValue] = useState<string>("");
     const [result, setResult] = useState<string | undefined>("");
 
     const nameValue = "ASCII";
 
-    const converterTarget = (event: React.ChangeEvent<HTMLInputElement>): void => {
-      const etv = event?.target.value;
-      setValue(etv);
+    const handleEvent = (event: React.ChangeEvent<HTMLInputElement>) => {
+        let eventVal = event.target.value;
+        converterTarget({eventVal, setValue});
     }
 
-    const convertResult = (): void => {
-        const textSplit = value.split('');
-        const convertToBin = textSplit.map((char) => char.charCodeAt(0).toString(2));
-        const convertToBinJoin = convertToBin.join(' ');
-        console.log(convertToBinJoin);
-        setResult(convertToBinJoin);
-        setValue("");
+    const handleClick = () => {
+        convertResult({value, setValue, setResult});
     }
 
     return (
@@ -30,11 +27,11 @@ function CompAsciiToBinary() {
                 <LabelInputComponent 
                     value={value}
                     nameValue={nameValue}
-                    converterTarget={(event)=>converterTarget(event)}
+                    converterTarget={(event)=>handleEvent(event)}
                 >{nameValue}</LabelInputComponent>
             </div>
 
-            <ButtonComponent convertResult={convertResult} />
+            <ButtonComponent convertResult={handleClick} />
             
             <div className="box--result">
                 <ResultComponent 

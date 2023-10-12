@@ -5,7 +5,9 @@ type ButtonProps = {
 function ButtonComponent(props: ButtonProps) {
   return (
     <>
-        <button type="button" onClick={props.convertResult}>Convert</button>
+        <button data-testid="testid-btn" type="button" onClick={props.convertResult}>
+          Convert
+        </button>
     </>
   )
 }
