@@ -1,5 +1,4 @@
 type TargetProps = {
-    //event: {target: {value: string}};
     eventVal: string;
     setValue: React.Dispatch<React.SetStateAction<string>>;
 }

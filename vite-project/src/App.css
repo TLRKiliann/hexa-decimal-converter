@@ -90,7 +90,7 @@
   padding-left: 20px;
 }
 
-.container .box .box--result p {
+.container .box .box--result span {
   font-size: 1.0rem;
   font-weight: bold;
 }

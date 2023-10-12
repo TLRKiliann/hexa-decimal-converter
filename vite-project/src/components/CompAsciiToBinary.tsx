@@ -24,7 +24,8 @@ function CompAsciiToBinary(): JSX.Element {
     return (
         <>
             <div className="labelinput--box">
-                <LabelInputComponent 
+                <LabelInputComponent
+                    data-testid="testid--input"
                     value={value}
                     nameValue={nameValue}
                     converterTarget={(event)=>handleEvent(event)}
