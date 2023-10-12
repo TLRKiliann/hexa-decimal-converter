@@ -1,25 +1,24 @@
 import React, { useState } from 'react'
 import LabelInputComponent from './LabelInputComponent.tsx'
 import ResultComponent from './ResultComponent.tsx'
-import ButtonComponent from './ButtonComponent.tsx';
+import ButtonComponent from './ButtonComponent.tsx'
+import { convertResult } from '../functions/hexToAscii.tsx'
+import { converterTarget } from '../functions/converterTarget.tsx'
 
 export default function CompHexadecimalDecimal() {
     
     const [value, setValue] = useState<string>("");
-    const [result, setResult] = useState<number | undefined>();
+    const [result, setResult] = useState<string | undefined>("");
 
     const nameValue = "Hexadecimal";
 
-    const converterTarget = (event: React.ChangeEvent<HTMLInputElement>) => {
-      const etv = event?.target.value;
-      setValue(etv);
+    const handleEvent = (event: React.ChangeEvent<HTMLInputElement>) => {
+        let eventVal = event.target.value;
+        converterTarget({eventVal, setValue});
     }
     
-    const convertResult = () => {
-      const parser = parseInt(value,16);
-      console.log(parser, "parser");
-      setResult(parser);
-      setValue("");
+    const handleClick = () => {
+        convertResult({value, setValue, setResult});
     }
 
     return (
@@ -29,11 +28,11 @@ export default function CompHexadecimalDecimal() {
                 <LabelInputComponent
                     value={value}
                     nameValue={nameValue}
-                    converterTarget={(event)=>converterTarget(event)}
+                    converterTarget={(event)=>handleEvent(event)}
                 >{nameValue}</LabelInputComponent>
             </div>
 
-            <ButtonComponent convertResult={convertResult} />
+            <ButtonComponent convertResult={handleClick} />
             
             <div className="box--result">
                 <ResultComponent 

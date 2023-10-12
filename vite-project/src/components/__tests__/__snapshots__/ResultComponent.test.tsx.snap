@@ -1,8 +1,0 @@
-// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
-
-exports[`Snapshat of ResultComponent 1`] = `
-<p>
-  Result : 
-  Not binary !!!
-</p>
-`;

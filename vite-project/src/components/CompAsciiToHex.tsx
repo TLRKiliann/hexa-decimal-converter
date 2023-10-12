@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
-import LabelInputComponent from './LabelInputComponent.js'
-import ResultComponent from './ResultComponent.js'
-import ButtonComponent from './ButtonComponent.js'
+import LabelInputComponent from './LabelInputComponent.tsx'
+import ResultComponent from './ResultComponent.tsx'
+import ButtonComponent from './ButtonComponent.tsx'
+import { convertResult } from '../functions/asciiToHex.tsx'
+import { converterTarget } from '../functions/converterTarget.tsx'
 
 function CompAsciiToHex() {
 
@@ -10,16 +12,13 @@ function CompAsciiToHex() {
 
     const nameValue = "ASCII";
 
-    const converterTarget = (event: React.ChangeEvent<HTMLInputElement>): void => {
-      const etv = event?.target.value;
-      setValue(etv);
+    const handleEvent = (event: React.ChangeEvent<HTMLInputElement>) => {
+        let eventVal = event.target.value;
+        converterTarget({eventVal, setValue});
     }
 
-    const convertResult = (): void => {
-        let asciiCode = value.charCodeAt(0);
-        let hexValue = asciiCode.toString(16);
-        setResult("0x" + hexValue);
-        setValue("");
+    const handleClick = () => {
+        convertResult({value, setValue, setResult});
     }
 
     return (
@@ -28,11 +27,11 @@ function CompAsciiToHex() {
                 <LabelInputComponent 
                     value={value}
                     nameValue={nameValue}
-                    converterTarget={(event)=>converterTarget(event)}
+                    converterTarget={(event)=>handleEvent(event)}
                 >{nameValue}</LabelInputComponent>
             </div>
 
-            <ButtonComponent convertResult={convertResult} />
+            <ButtonComponent convertResult={handleClick} />
             
             <div className="box--result">
                 <ResultComponent 

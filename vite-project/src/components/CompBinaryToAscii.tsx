@@ -1,26 +1,24 @@
 import React, { useState } from 'react'
 import LabelInputComponent from './LabelInputComponent.tsx'
 import ResultComponent from './ResultComponent.tsx'
-import ButtonComponent from './ButtonComponent.tsx';
+import ButtonComponent from './ButtonComponent.tsx'
+import { convertResult } from '../functions/binaryToAscii.tsx'
+import { converterTarget } from '../functions/converterTarget.tsx'
 
 function CompBinaryToAscii(): JSX.Element {
     
     const [value, setValue] = useState<string>("");
-    const [result, setResult] = useState<string | undefined>();
+    const [result, setResult] = useState<string | undefined>("");
 
     const nameValue = "Binary";
 
-    const converterTarget = (event: React.ChangeEvent<HTMLInputElement>) => {
-        const etv = event?.target.value;
-        setValue(etv);
+    const handleEvent = (event: React.ChangeEvent<HTMLInputElement>) => {
+        let eventVal = event.target.value;
+        converterTarget({eventVal, setValue});
     }
     
-    const convertResult = () => {
-        const parser = value.split(" ");
-        const convertToAscii = parser.map((elem) => String.fromCharCode(parseInt(elem, 2)));
-        const resltOfConversion = convertToAscii.join("");
-        setResult(resltOfConversion);
-        setValue("");
+    const handleClick = () => {
+        convertResult({value, setResult, setValue});
     }
 
     return (
@@ -30,11 +28,11 @@ function CompBinaryToAscii(): JSX.Element {
                 <LabelInputComponent
                     value={value}
                     nameValue={nameValue}
-                    converterTarget={(event)=>converterTarget(event)}
+                    converterTarget={(event)=>handleEvent(event)}
                 >{nameValue}</LabelInputComponent>
             </div>
 
-            <ButtonComponent convertResult={convertResult} />
+            <ButtonComponent convertResult={handleClick} />
             
             <div className="box--result">
                 <ResultComponent 

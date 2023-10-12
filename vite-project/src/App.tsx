@@ -19,12 +19,12 @@ function App() {
       <div className="container">
 
         <div className="box">
-          <h2>ASCII to binary:</h2>
+          <h2>ASCII to Binary:</h2>
           <CompAsciiToBinary />
         </div>
 
         <div className="box">
-          <h2>binary to ASCII:</h2>
+          <h2>Binary to ASCII:</h2>
           <CompBinaryToAscii />
         </div>
 
@@ -33,12 +33,12 @@ function App() {
       <div className="container">
 
         <div className="box">
-          <h2>binary to decimal:</h2>
+          <h2>Binary to Decimal:</h2>
           <CompBinaryDecimal />
         </div>
 
         <div className="box">
-          <h2>hexadecimal to decimal:</h2>
+          <h2>Hexadecimal to Decimal:</h2>
           <CompHexadecimalDecimal />
         </div>
 
@@ -47,12 +47,12 @@ function App() {
       <div className="container">
 
         <div className="box">
-          <h2>ASCII to Hex:</h2>
+          <h2>ASCII to Hexadecimal:</h2>
           <CompAsciiToHex />
         </div>
 
         <div className="box">
-          <h2>Hex to ASCII:</h2>
+          <h2>Hexadecimal to ASCII:</h2>
           <CompHexToAscii />
         </div>
 
